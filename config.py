@@ -1,8 +1,8 @@
 from pygame.locals import *
 
 """ Screen """
-SCREEN_W = 1800
-SCREEN_H = 1200
+SCREEN_W = 1920
+SCREEN_H = 1080
 SCREEN_MODE = 0
 # SCREEN_W = 2560
 # SCREEN_H = 1440
@@ -24,7 +24,7 @@ WP_TOLERANCE = 50               # switch to next waypoint when current is in vic
 """ Obstacles """
 COLLIDABLE_NUM = 50
 COLLIDABLE_R_MIN = 10
-COLLIDABLE_R_MAX = 80
+COLLIDABLE_R_MAX = 70
 COLLIDABLE_MIN_DIST = 2         # min allowed dist. betw. agent and obstacle
 
 """ Grid """

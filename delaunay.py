@@ -158,8 +158,10 @@ def in_circle(a, b, c, d):
     b1, b2 = b[0]-d[0], b[1]-d[1]
     c1, c2 = c[0]-d[0], c[1]-d[1]
     a3, b3, c3 = a1**2 + a2**2, b1**2 + b2**2, c1**2 + c2**2
-    det = a1*b2*c3 + a2*b3*c1 + a3*b1*c2 - (a3*b2*c1 + a1*b3*c2 + a2*b1*c3)
-    return det < 0
+    # this is faster, but doesn't work on Windows
+    # det = a1*b2*c3 + a2*b3*c1 + a3*b1*c2 - (a3*b2*c1 + a1*b3*c2 + a2*b1*c3)
+    m = np.array([[a1, a2, a3], [b1, b2, b3], [c1, c2, c3]])
+    return np.linalg.det(m) < 0
 
 
 def right_of(p, e):
